@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link media="all" rel="stylesheet" href="WindowAssistantStyle.css" type="text/css" />
+  <script type="text/javascript" src="WindowAssistant.js"></script>
+
+  <script>
+
+function makeTestWindow(x,y){
+  x = x || 10;
+  y = y || 10;
+
+  var content = document.createElement("div");
+  content.style.width = "400px";
+  content.style.height = "300px";
+
+  window1 = new WindowAssistant({title:"テストウィンドウ",
+                        closeButton:true,
+                        x:x,
+                        y:y,
+                        fixed:true
+  });
+  window1.onCloseWindow = function(){
+    return true;
+  }
+  window1.content_area.appendChild(content);
+
+
+}
+window.addEventListener("load",function(){
+  for(var i = 0; i < 5; i++){
+    for(var j = 0; j < 5; j++){
+      makeTestWindow(i * 450,j*350);
+    }
+  }
+    
+});
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+

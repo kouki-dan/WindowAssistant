@@ -1,0 +1,56 @@
+
+div.window_frame{
+  position:absolute;
+  overflow:hidden;
+
+  border:solid 2px rgb(0,0,0);
+  border-radius: 7px;        
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  z-index:0;
+}
+div.title_bar{
+  width:100%;
+  height:25px;
+  background-color:rgb(0,0,0);
+  margin:0;
+  padding:0;
+
+  cursor:move;
+  text-align:center;
+  color:#fff;
+}
+div.content_area{
+  width:100%;
+  margin:0;
+  padding:0;
+  background-color:#fff;
+  border-radius: 0 0 7px 7px; 
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+}
+div.close_button{
+  margin:2px;
+  padding:0;
+  width:18px;
+  height:18px;
+  line-height:18px;
+
+  border-radius: 9px; 
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+
+  float:right;
+  cursor:default;
+  background-color:#f00;
+  color:#000;
+}
+div.close_button:active{
+  opacity:0.6;
+  filter:alpha(opacity=60);
+  -moz-opacity:0.6;
+}
+div.clear_float_both{
+  clear:both;
+}
+  
